@@ -1,0 +1,105 @@
+﻿  Orbit_Simulator.cpp
+  test.cpp
+C:\Users\marco\Desktop\orbit_simulator\Orbit_Simulator\Orbit_Simulator\testPart.h(30,7): error C2065: 'GPS': undeclared identifier
+C:\Users\marco\Desktop\orbit_simulator\Orbit_Simulator\Orbit_Simulator\testPart.h(30,11): error C2146: syntax error: missing ';' before identifier 'gps'
+C:\Users\marco\Desktop\orbit_simulator\Orbit_Simulator\Orbit_Simulator\testPart.h(30,11): error C2065: 'gps': undeclared identifier
+C:\Users\marco\Desktop\orbit_simulator\Orbit_Simulator\Orbit_Simulator\testPart.h(31,7): error C2065: 'gps': undeclared identifier
+C:\Users\marco\Desktop\orbit_simulator\Orbit_Simulator\Orbit_Simulator\testPart.h(32,7): error C2065: 'gps': undeclared identifier
+C:\Users\marco\Desktop\orbit_simulator\Orbit_Simulator\Orbit_Simulator\testPart.h(33,7): error C2065: 'gps': undeclared identifier
+C:\Users\marco\Desktop\orbit_simulator\Orbit_Simulator\Orbit_Simulator\testPart.h(34,7): error C2065: 'gps': undeclared identifier
+C:\Users\marco\Desktop\orbit_simulator\Orbit_Simulator\Orbit_Simulator\testPart.h(35,7): error C2065: 'gps': undeclared identifier
+C:\Users\marco\Desktop\orbit_simulator\Orbit_Simulator\Orbit_Simulator\testPart.h(37,7): error C2065: 'Part': undeclared identifier
+C:\Users\marco\Desktop\orbit_simulator\Orbit_Simulator\Orbit_Simulator\testPart.h(37,12): error C2146: syntax error: missing ';' before identifier 'part'
+C:\Users\marco\Desktop\orbit_simulator\Orbit_Simulator\Orbit_Simulator\testPart.h(37,17): error C2065: 'gps': undeclared identifier
+C:\Users\marco\Desktop\orbit_simulator\Orbit_Simulator\Orbit_Simulator\testPart.h(37,12): error C3861: 'part': identifier not found
+C:\Users\marco\Desktop\orbit_simulator\Orbit_Simulator\Orbit_Simulator\testPart.h(39,7): error C2065: 'part': undeclared identifier
+C:\Users\marco\Desktop\orbit_simulator\Orbit_Simulator\Orbit_Simulator\testPart.h(40,7): error C2065: 'part': undeclared identifier
+C:\Users\marco\Desktop\orbit_simulator\Orbit_Simulator\Orbit_Simulator\testPart.h(41,7): error C2065: 'part': undeclared identifier
+C:\Users\marco\Desktop\orbit_simulator\Orbit_Simulator\Orbit_Simulator\testPart.h(42,7): error C2065: 'part': undeclared identifier
+C:\Users\marco\Desktop\orbit_simulator\Orbit_Simulator\Orbit_Simulator\testPart.h(43,7): error C2065: 'part': undeclared identifier
+C:\Users\marco\Desktop\orbit_simulator\Orbit_Simulator\Orbit_Simulator\testPart.h(50,7): error C2065: 'GPS': undeclared identifier
+C:\Users\marco\Desktop\orbit_simulator\Orbit_Simulator\Orbit_Simulator\testPart.h(50,11): error C2146: syntax error: missing ';' before identifier 'gps'
+C:\Users\marco\Desktop\orbit_simulator\Orbit_Simulator\Orbit_Simulator\testPart.h(50,11): error C2065: 'gps': undeclared identifier
+C:\Users\marco\Desktop\orbit_simulator\Orbit_Simulator\Orbit_Simulator\testPart.h(51,7): error C2065: 'gps': undeclared identifier
+C:\Users\marco\Desktop\orbit_simulator\Orbit_Simulator\Orbit_Simulator\testPart.h(52,7): error C2065: 'gps': undeclared identifier
+C:\Users\marco\Desktop\orbit_simulator\Orbit_Simulator\Orbit_Simulator\testPart.h(53,7): error C2065: 'gps': undeclared identifier
+C:\Users\marco\Desktop\orbit_simulator\Orbit_Simulator\Orbit_Simulator\testPart.h(54,7): error C2065: 'gps': undeclared identifier
+C:\Users\marco\Desktop\orbit_simulator\Orbit_Simulator\Orbit_Simulator\testPart.h(55,7): error C2065: 'gps': undeclared identifier
+C:\Users\marco\Desktop\orbit_simulator\Orbit_Simulator\Orbit_Simulator\testPart.h(57,7): error C2065: 'Part': undeclared identifier
+C:\Users\marco\Desktop\orbit_simulator\Orbit_Simulator\Orbit_Simulator\testPart.h(57,12): error C2146: syntax error: missing ';' before identifier 'part'
+C:\Users\marco\Desktop\orbit_simulator\Orbit_Simulator\Orbit_Simulator\testPart.h(57,17): error C2065: 'gps': undeclared identifier
+C:\Users\marco\Desktop\orbit_simulator\Orbit_Simulator\Orbit_Simulator\testPart.h(57,12): error C3861: 'part': identifier not found
+C:\Users\marco\Desktop\orbit_simulator\Orbit_Simulator\Orbit_Simulator\testPart.h(59,7): error C2065: 'part': undeclared identifier
+C:\Users\marco\Desktop\orbit_simulator\Orbit_Simulator\Orbit_Simulator\testPart.h(60,7): error C2065: 'part': undeclared identifier
+C:\Users\marco\Desktop\orbit_simulator\Orbit_Simulator\Orbit_Simulator\testPart.h(61,7): error C2065: 'part': undeclared identifier
+C:\Users\marco\Desktop\orbit_simulator\Orbit_Simulator\Orbit_Simulator\testPart.h(62,7): error C2065: 'part': undeclared identifier
+C:\Users\marco\Desktop\orbit_simulator\Orbit_Simulator\Orbit_Simulator\testPart.h(63,7): error C2065: 'part': undeclared identifier
+C:\Users\marco\Desktop\orbit_simulator\Orbit_Simulator\Orbit_Simulator\testPart.h(70,7): error C2065: 'GPS': undeclared identifier
+C:\Users\marco\Desktop\orbit_simulator\Orbit_Simulator\Orbit_Simulator\testPart.h(70,11): error C2146: syntax error: missing ';' before identifier 'gps'
+C:\Users\marco\Desktop\orbit_simulator\Orbit_Simulator\Orbit_Simulator\testPart.h(70,11): error C2065: 'gps': undeclared identifier
+C:\Users\marco\Desktop\orbit_simulator\Orbit_Simulator\Orbit_Simulator\testPart.h(71,7): error C2065: 'gps': undeclared identifier
+C:\Users\marco\Desktop\orbit_simulator\Orbit_Simulator\Orbit_Simulator\testPart.h(72,7): error C2065: 'gps': undeclared identifier
+C:\Users\marco\Desktop\orbit_simulator\Orbit_Simulator\Orbit_Simulator\testPart.h(73,7): error C2065: 'gps': undeclared identifier
+C:\Users\marco\Desktop\orbit_simulator\Orbit_Simulator\Orbit_Simulator\testPart.h(74,7): error C2065: 'gps': undeclared identifier
+C:\Users\marco\Desktop\orbit_simulator\Orbit_Simulator\Orbit_Simulator\testPart.h(75,7): error C2065: 'gps': undeclared identifier
+C:\Users\marco\Desktop\orbit_simulator\Orbit_Simulator\Orbit_Simulator\testPart.h(77,7): error C2065: 'Part': undeclared identifier
+C:\Users\marco\Desktop\orbit_simulator\Orbit_Simulator\Orbit_Simulator\testPart.h(77,12): error C2146: syntax error: missing ';' before identifier 'part'
+C:\Users\marco\Desktop\orbit_simulator\Orbit_Simulator\Orbit_Simulator\testPart.h(77,17): error C2065: 'gps': undeclared identifier
+C:\Users\marco\Desktop\orbit_simulator\Orbit_Simulator\Orbit_Simulator\testPart.h(77,12): error C3861: 'part': identifier not found
+C:\Users\marco\Desktop\orbit_simulator\Orbit_Simulator\Orbit_Simulator\testPart.h(79,7): error C2065: 'part': undeclared identifier
+C:\Users\marco\Desktop\orbit_simulator\Orbit_Simulator\Orbit_Simulator\testPart.h(80,7): error C2065: 'part': undeclared identifier
+C:\Users\marco\Desktop\orbit_simulator\Orbit_Simulator\Orbit_Simulator\testPart.h(81,7): error C2065: 'part': undeclared identifier
+C:\Users\marco\Desktop\orbit_simulator\Orbit_Simulator\Orbit_Simulator\testPart.h(82,7): error C2065: 'part': undeclared identifier
+C:\Users\marco\Desktop\orbit_simulator\Orbit_Simulator\Orbit_Simulator\testPart.h(83,7): error C2065: 'part': undeclared identifier
+C:\Users\marco\Desktop\orbit_simulator\Orbit_Simulator\Orbit_Simulator\testPart.h(85,4): error C2014: preprocessor command must start as first nonwhite space
+C:\Users\marco\Desktop\orbit_simulator\Orbit_Simulator\Orbit_Simulator\testHandleCollision.h(32,7): error C2065: 'StubGps5050': undeclared identifier
+C:\Users\marco\Desktop\orbit_simulator\Orbit_Simulator\Orbit_Simulator\testHandleCollision.h(32,19): error C2146: syntax error: missing ';' before identifier 'stubGps5050'
+C:\Users\marco\Desktop\orbit_simulator\Orbit_Simulator\Orbit_Simulator\testHandleCollision.h(32,19): error C2065: 'stubGps5050': undeclared identifier
+C:\Users\marco\Desktop\orbit_simulator\Orbit_Simulator\Orbit_Simulator\testHandleCollision.h(33,7): error C2065: 'StubBullet5050': undeclared identifier
+C:\Users\marco\Desktop\orbit_simulator\Orbit_Simulator\Orbit_Simulator\testHandleCollision.h(33,22): error C2146: syntax error: missing ';' before identifier 'stubBullet5050'
+C:\Users\marco\Desktop\orbit_simulator\Orbit_Simulator\Orbit_Simulator\testHandleCollision.h(33,22): error C2065: 'stubBullet5050': undeclared identifier
+C:\Users\marco\Desktop\orbit_simulator\Orbit_Simulator\Orbit_Simulator\testHandleCollision.h(34,7): error C2065: 'Simulator': undeclared identifier
+C:\Users\marco\Desktop\orbit_simulator\Orbit_Simulator\Orbit_Simulator\testHandleCollision.h(34,17): error C2146: syntax error: missing ';' before identifier 'sim'
+C:\Users\marco\Desktop\orbit_simulator\Orbit_Simulator\Orbit_Simulator\testHandleCollision.h(34,17): error C2065: 'sim': undeclared identifier
+C:\Users\marco\Desktop\orbit_simulator\Orbit_Simulator\Orbit_Simulator\testHandleCollision.h(35,19): error C2065: 'OrbitalObject': undeclared identifier
+C:\Users\marco\Desktop\orbit_simulator\Orbit_Simulator\Orbit_Simulator\testHandleCollision.h(35,1): error C2059: syntax error: '>'
+C:\Users\marco\Desktop\orbit_simulator\Orbit_Simulator\Orbit_Simulator\testHandleCollision.h(35,55): error C2065: 'stubGps5050': undeclared identifier
+C:\Users\marco\Desktop\orbit_simulator\Orbit_Simulator\Orbit_Simulator\testHandleCollision.h(35,69): error C2065: 'stubBullet5050': undeclared identifier
+C:\Users\marco\Desktop\orbit_simulator\Orbit_Simulator\Orbit_Simulator\testHandleCollision.h(38,7): error C2065: 'sim': undeclared identifier
+C:\Users\marco\Desktop\orbit_simulator\Orbit_Simulator\Orbit_Simulator\testHandleCollision.h(41,10): error C2144: syntax error: 'void' should be preceded by ')'
+C:\Users\marco\Desktop\orbit_simulator\Orbit_Simulator\Orbit_Simulator\testHandleCollision.h(41,10): error C2144: syntax error: 'void' should be preceded by ';'
+C:\Users\marco\Desktop\orbit_simulator\Orbit_Simulator\Orbit_Simulator\testHandleCollision.h(41,1): error C2059: syntax error: ')'
+C:\Users\marco\Desktop\orbit_simulator\Orbit_Simulator\Orbit_Simulator\testHandleCollision.h(41,10): error C2059: syntax error: '!'
+C:\Users\marco\Desktop\orbit_simulator\Orbit_Simulator\Orbit_Simulator\testHandleCollision.h(42,7): error C2065: 'stubBullet5050': undeclared identifier
+C:\Users\marco\Desktop\orbit_simulator\Orbit_Simulator\Orbit_Simulator\testHandleCollision.h(51,7): error C2065: 'StubGps5050': undeclared identifier
+C:\Users\marco\Desktop\orbit_simulator\Orbit_Simulator\Orbit_Simulator\testHandleCollision.h(51,19): error C2146: syntax error: missing ';' before identifier 'stubGps5050'
+C:\Users\marco\Desktop\orbit_simulator\Orbit_Simulator\Orbit_Simulator\testHandleCollision.h(51,19): error C2065: 'stubGps5050': undeclared identifier
+C:\Users\marco\Desktop\orbit_simulator\Orbit_Simulator\Orbit_Simulator\testHandleCollision.h(52,7): error C2065: 'StubBullet50150': undeclared identifier
+C:\Users\marco\Desktop\orbit_simulator\Orbit_Simulator\Orbit_Simulator\testHandleCollision.h(52,23): error C2146: syntax error: missing ';' before identifier 'stubBullet50150'
+C:\Users\marco\Desktop\orbit_simulator\Orbit_Simulator\Orbit_Simulator\testHandleCollision.h(52,23): error C2065: 'stubBullet50150': undeclared identifier
+C:\Users\marco\Desktop\orbit_simulator\Orbit_Simulator\Orbit_Simulator\testHandleCollision.h(53,7): error C2065: 'Simulator': undeclared identifier
+C:\Users\marco\Desktop\orbit_simulator\Orbit_Simulator\Orbit_Simulator\testHandleCollision.h(53,17): error C2146: syntax error: missing ';' before identifier 'sim'
+C:\Users\marco\Desktop\orbit_simulator\Orbit_Simulator\Orbit_Simulator\testHandleCollision.h(53,17): error C2065: 'sim': undeclared identifier
+C:\Users\marco\Desktop\orbit_simulator\Orbit_Simulator\Orbit_Simulator\testHandleCollision.h(54,19): error C2065: 'OrbitalObject': undeclared identifier
+C:\Users\marco\Desktop\orbit_simulator\Orbit_Simulator\Orbit_Simulator\testHandleCollision.h(54,1): error C2059: syntax error: '>'
+C:\Users\marco\Desktop\orbit_simulator\Orbit_Simulator\Orbit_Simulator\testHandleCollision.h(54,55): error C2065: 'stubGps5050': undeclared identifier
+C:\Users\marco\Desktop\orbit_simulator\Orbit_Simulator\Orbit_Simulator\testHandleCollision.h(54,69): error C2065: 'stubBullet50150': undeclared identifier
+C:\Users\marco\Desktop\orbit_simulator\Orbit_Simulator\Orbit_Simulator\testHandleCollision.h(57,7): error C2065: 'sim': undeclared identifier
+C:\Users\marco\Desktop\orbit_simulator\Orbit_Simulator\Orbit_Simulator\testHandleCollision.h(60,10): error C2144: syntax error: 'void' should be preceded by ')'
+C:\Users\marco\Desktop\orbit_simulator\Orbit_Simulator\Orbit_Simulator\testHandleCollision.h(60,10): error C2144: syntax error: 'void' should be preceded by ';'
+C:\Users\marco\Desktop\orbit_simulator\Orbit_Simulator\Orbit_Simulator\testHandleCollision.h(60,1): error C2059: syntax error: ')'
+C:\Users\marco\Desktop\orbit_simulator\Orbit_Simulator\Orbit_Simulator\testHandleCollision.h(60,10): error C2059: syntax error: '!'
+C:\Users\marco\Desktop\orbit_simulator\Orbit_Simulator\Orbit_Simulator\testHandleCollision.h(61,7): error C2065: 'stubBullet50150': undeclared identifier
+C:\Users\marco\Desktop\orbit_simulator\Orbit_Simulator\Orbit_Simulator\testHandleCollision.h(69,7): error C2065: 'StubGps5050': undeclared identifier
+C:\Users\marco\Desktop\orbit_simulator\Orbit_Simulator\Orbit_Simulator\testHandleCollision.h(69,19): error C2146: syntax error: missing ';' before identifier 'stubGps5050'
+C:\Users\marco\Desktop\orbit_simulator\Orbit_Simulator\Orbit_Simulator\testHandleCollision.h(69,19): error C2065: 'stubGps5050': undeclared identifier
+C:\Users\marco\Desktop\orbit_simulator\Orbit_Simulator\Orbit_Simulator\testHandleCollision.h(70,7): error C2065: 'StubBullet5050': undeclared identifier
+C:\Users\marco\Desktop\orbit_simulator\Orbit_Simulator\Orbit_Simulator\testHandleCollision.h(70,22): error C2146: syntax error: missing ';' before identifier 'stubBullet15050'
+C:\Users\marco\Desktop\orbit_simulator\Orbit_Simulator\Orbit_Simulator\testHandleCollision.h(70,22): error C2065: 'stubBullet15050': undeclared identifier
+C:\Users\marco\Desktop\orbit_simulator\Orbit_Simulator\Orbit_Simulator\testHandleCollision.h(71,7): error C2065: 'Simulator': undeclared identifier
+C:\Users\marco\Desktop\orbit_simulator\Orbit_Simulator\Orbit_Simulator\testHandleCollision.h(71,17): error C2146: syntax error: missing ';' before identifier 'sim'
+C:\Users\marco\Desktop\orbit_simulator\Orbit_Simulator\Orbit_Simulator\testHandleCollision.h(71,17): error C2065: 'sim': undeclared identifier
+C:\Users\marco\Desktop\orbit_simulator\Orbit_Simulator\Orbit_Simulator\testHandleCollision.h(72,19): error C2065: 'OrbitalObject': undeclared identifier
+C:\Users\marco\Desktop\orbit_simulator\Orbit_Simulator\Orbit_Simulator\testHandleCollision.h(72,1): error C2059: syntax error: '>'
+C:\Users\marco\Desktop\orbit_simulator\Orbit_Simulator\Orbit_Simulator\testHandleCollision.h(72,1): fatal  error C1003: error count exceeds 100; stopping compilation
+  Generating Code...

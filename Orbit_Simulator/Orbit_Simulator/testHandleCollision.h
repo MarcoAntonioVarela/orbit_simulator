@@ -1,4 +1,3 @@
-#pragma once
 /***********************************************************************
  * Header File:
  *   testHandleCollision

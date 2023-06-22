@@ -18,6 +18,9 @@
     <ClCompile Include="Orbit_Simulator.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="test.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="testHandleCollision.h">
@@ -25,6 +28,9 @@
     </ClInclude>
     <ClInclude Include="testPart.h">
       <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="test.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
