@@ -128,9 +128,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Orbit_Simulator.cpp" />
+    <ClCompile Include="simulator.cpp" />
     <ClCompile Include="test.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="orbital_object.h" />
+    <ClInclude Include="simulator.h" />
     <ClInclude Include="test.h" />
     <ClInclude Include="testHandleCollision.h" />
     <ClInclude Include="testPart.h" />

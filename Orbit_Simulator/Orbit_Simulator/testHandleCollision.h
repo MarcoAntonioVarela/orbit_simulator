@@ -37,8 +37,8 @@ private:
       //Exercise
       sim.handleCollision()
 
-         //Verify
-         assert(stubGps5050.isDead == true);
+      //Verify
+      assert(stubGps5050.isDead == true);
       assert(stubBullet5050.isDead == true);
    }
 
@@ -56,8 +56,8 @@ private:
       //Exercise
       sim.handleCollision()
 
-         //Verify
-         assert(stubGps5050.isDead == false);
+      //Verify
+      assert(stubGps5050.isDead == false);
       assert(stubBullet50150.isDead == false);
    }
    /*****************************************************
@@ -75,7 +75,7 @@ private:
       sim.handleCollision()
 
          //Verify
-         assert(stubGps5050.isDead == false);
+      assert(stubGps5050.isDead == false);
       assert(stubBullet15050.isDead == false);
    }
    /*****************************************************
@@ -93,7 +93,7 @@ private:
       sim.handleCollision()
 
          //Verify
-         assert(stubGps5050.isDead == false);
+      assert(stubGps5050.isDead == false);
       assert(stubBullet150150.isDead == false);
    }
 
