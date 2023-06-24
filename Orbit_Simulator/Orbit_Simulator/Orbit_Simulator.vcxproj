@@ -127,16 +127,28 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="acceleration.cpp" />
+    <ClCompile Include="angle.cpp" />
     <ClCompile Include="Orbit_Simulator.cpp" />
+    <ClCompile Include="parts.cpp" />
+    <ClCompile Include="position.cpp" />
     <ClCompile Include="simulator.cpp" />
     <ClCompile Include="test.cpp" />
+    <ClCompile Include="velocity.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="orbital_object.h" />
+    <ClInclude Include="acceleration.h" />
+    <ClInclude Include="angle.h" />
+    <ClInclude Include="bullet.h" />
+    <ClInclude Include="gps.h" />
+    <ClInclude Include="orbitalObject.h" />
+    <ClInclude Include="parts.h" />
+    <ClInclude Include="position.h" />
     <ClInclude Include="simulator.h" />
     <ClInclude Include="test.h" />
     <ClInclude Include="testHandleCollision.h" />
     <ClInclude Include="testPart.h" />
+    <ClInclude Include="velocity.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

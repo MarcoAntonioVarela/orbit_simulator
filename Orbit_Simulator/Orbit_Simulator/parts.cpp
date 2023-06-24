@@ -10,7 +10,6 @@
 
 #include "parts.h"
 
-
 /*****************
 * Copy constructor
 ******************/

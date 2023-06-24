@@ -9,13 +9,18 @@
 
 #pragma once
 #include <vector>
-#include "orbital_object.h"
+#include "orbitalObject.h"
 
-class Simulator {
+class TestHandleCollision;
+class Simulator 
+{
+   friend TestHandleCollision;
 public:
    void handleCollision();
-   void addOrbitalObject(OrbitalObject* object);
+   
+   //void addOrbitalObject(OrbitalObject* object);
 
 private:
    std::vector<OrbitalObject*> orbitalObjects;
+
 };

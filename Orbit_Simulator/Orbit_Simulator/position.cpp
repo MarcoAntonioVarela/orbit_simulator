@@ -29,6 +29,15 @@ Position& Position::operator = (const Position& pt)
 }
 
 /******************************************
+ * POINT : COMPARISON
+ * Compare two points
+ *****************************************/
+bool Position::operator== (const Position& pt)
+{
+   return (x == pt.x) && (y == pt.y);
+}
+
+/******************************************
  * POSITION insertion
  *       Display coordinates on the screen
  *****************************************/

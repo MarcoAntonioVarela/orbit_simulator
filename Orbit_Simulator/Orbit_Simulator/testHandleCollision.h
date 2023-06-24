@@ -1,14 +1,17 @@
-/***********************************************************************
- * Header File:
- *   testHandleCollision
- * Author:
- *   Marco Varela
- * Summary:
- *   All the unit tests for handleCollision
- ************************************************************************/
+//**********************************************************************
+// * Header File:
+// *   testHandleCollision
+// * Author:
+// *   Marco Varela
+// * Summary:
+// *   All the unit tests for handleCollision
+// ************************************************************************/
 
 #include <cassert>
 #include <vector>
+#include "gps.h"
+#include "bullet.h"
+#include "simulator.h"
 #pragma once
 
 class TestHandleCollision
@@ -32,10 +35,12 @@ private:
       StubGps5050 stubGps5050;
       StubBullet5050 stubBullet5050;
       Simulator sim;
-      std::vector<OrbitalObject*> orbitalObjects = { &stubGps5050, &stubBullet5050 };
+      sim.orbitalObjects.push_back(&stubGps5050);
+      sim.orbitalObjects.push_back(&stubBullet5050);
+
 
       //Exercise
-      sim.handleCollision()
+      sim.handleCollision();
 
       //Verify
       assert(stubGps5050.isDead == true);
@@ -51,10 +56,10 @@ private:
       StubGps5050 stubGps5050;
       StubBullet50150 stubBullet50150;
       Simulator sim;
-      std::vector<OrbitalObject*> orbitalObjects = { &stubGps5050, &stubBullet50150 };
+      sim.orbitalObjects = { &stubGps5050, &stubBullet50150 };
 
       //Exercise
-      sim.handleCollision()
+      sim.handleCollision();
 
       //Verify
       assert(stubGps5050.isDead == false);
@@ -67,32 +72,32 @@ private:
    {
       // Set up
       StubGps5050 stubGps5050;
-      StubBullet5050 stubBullet15050;
+      StubBullet15050 stubBullet15050;
       Simulator sim;
-      std::vector<OrbitalObject*> orbitalObjects = { &stubGps5050, &stubBullet15050 };
+      sim.orbitalObjects = { &stubGps5050, &stubBullet15050 };;
 
       //Exercise
-      sim.handleCollision()
+      sim.handleCollision();
 
-         //Verify
+      //Verify
       assert(stubGps5050.isDead == false);
       assert(stubBullet15050.isDead == false);
    }
    /*****************************************************
    * TESTING Scenario 4: Different position
-   *****************************************************/
+   ****************************************************/
    void test_scenario4_different_position()
    {
       // Set up
       StubGps5050 stubGps5050;
       StubBullet5050 stubBullet150150;
       Simulator sim;
-      std::vector<OrbitalObject*> orbitalObjects = { &stubGps5050, &stubBullet150150 };
+      sim.orbitalObjects = { &stubGps5050, &stubBullet150150 };
 
       //Exercise
-      sim.handleCollision()
+      sim.handleCollision();
 
-         //Verify
+      //Verify
       assert(stubGps5050.isDead == false);
       assert(stubBullet150150.isDead == false);
    }

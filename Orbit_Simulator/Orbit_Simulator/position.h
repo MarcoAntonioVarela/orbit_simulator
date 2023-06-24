@@ -17,6 +17,7 @@
 class TestPosition;
 class Acceleration;
 class Velocity;
+class TestPart;
 
 /*********************************************
  * Position
@@ -26,12 +27,14 @@ class Position
 {
 public:
    friend TestPosition;
-   
+   friend TestPart;
+
    // constructors
    Position()            : x(0.0), y(0.0)  {}
    Position(double x, double y);
    Position(const Position & pt) : x(pt.x), y(pt.y) {}
    Position& operator = (const Position& pt);
+   bool operator== (const Position& pt);
 
    // getters
    double getMetersX()       const { return x;                    }

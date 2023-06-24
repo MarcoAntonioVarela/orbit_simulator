@@ -4,8 +4,7 @@
 * Author:
 *    Efrain Gomez Fajardo
 * Summary:
-*    When collision happens, it is destroyed, and it
-*    created three different parts.
+*    The atttributes and methods related to GPS.
 ************************************************************************/
 
 #include "orbitalObject.h"
@@ -26,3 +25,24 @@ class GPS : protected OrbitalObject
       Velocity getVelocity() const { return velocity; }
       Angle getAngle()       const { return angle; }
 };
+
+
+
+class DummyGPS : protected GPS
+{
+public:
+   bool getPosition() const { return false; }
+   bool getVelocity() const { return false; }
+   bool getAngle()    const { return false; }
+};
+
+
+
+class StubGps5050 : protected DummyGPS
+{
+   friend TestHandleCollision;
+   protected:
+      Position position = Position(50.0, 50.0);
+};
+
+

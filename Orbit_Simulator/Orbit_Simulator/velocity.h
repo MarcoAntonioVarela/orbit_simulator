@@ -10,16 +10,17 @@
 #pragma once
 
 class Acceleration;
+class TestPart;
 
 /**********************************
 * VELOCITY
 ***********************************/
 class Velocity
 {
-   friend class TestPart;
+   friend TestPart;
    protected:
-      int dx;
-      int dy;
+      double dx;
+      double dy;
    public:
       void update(const Acceleration & acceleration);
 };

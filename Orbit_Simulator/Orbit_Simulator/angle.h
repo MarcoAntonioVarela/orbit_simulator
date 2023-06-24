@@ -11,6 +11,8 @@
 #define PI 3.1415926
 #define PI2  PI * 2
 
+class TestPart;
+
 /***********************************
 * CLASS ANGLE
 * Represents an angle. It is stored in
@@ -18,6 +20,7 @@
 ************************************/
 class Angle
 {
+   friend TestPart;
 private:
    double aRadians;
 
