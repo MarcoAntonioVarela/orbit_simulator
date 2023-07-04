@@ -9,12 +9,11 @@
 
 #include <iostream>
 #include "test.h"
-#include "simulator.h"
 
 int main()
-{  
+{
    testRunner();
 
-   std::cout << "All tests passed :) \n";
-}
+   std::cout << "All tests pass!" << std::endl;
 
+}

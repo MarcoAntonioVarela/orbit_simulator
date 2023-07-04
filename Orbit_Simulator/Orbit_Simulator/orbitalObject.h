@@ -10,6 +10,7 @@
 #include "position.h"
 #include "velocity.h"
 #include "angle.h"
+#include <cassert>
 #pragma once
 
 class TestHandleCollision;
@@ -24,8 +25,15 @@ protected:
    Angle angle;
 
 public:
+
+   // Constructor
+   OrbitalObject() : position(Position()), velocity(Velocity()), angle(Angle()) {}
+   OrbitalObject(const Position& position, const Velocity& velocity, const Angle& angle) : position(position), velocity(velocity), angle(angle) {}
+
    Position getPosition() const { return position; }
-   bool isDead = false;
    void kill() { isDead = true; }
    //virtual void update() = 0;
+
+private:
+   bool isDead = false;
 };

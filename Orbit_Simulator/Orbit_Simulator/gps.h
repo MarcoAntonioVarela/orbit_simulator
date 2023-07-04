@@ -17,32 +17,42 @@
 /************************
 * GPS : ORBITAL OBJECT
 *************************/
-class GPS : protected OrbitalObject
+class GPS : public OrbitalObject
 {
    friend class TestPart;
    public:
+      GPS() : OrbitalObject() {};
+      GPS(Position position, Velocity velocity, Angle angle) : OrbitalObject(position, velocity, angle) {};
       Position getPosition() const { return position; }
       Velocity getVelocity() const { return velocity; }
       Angle getAngle()       const { return angle; }
 };
 
 
-
-class DummyGPS : protected GPS
+/************************
+* DUMMY GPS : GPS
+*************************/
+class DummyGPS : public GPS
 {
 public:
+   DummyGPS() : GPS() {};
    bool getPosition() const { return false; }
    bool getVelocity() const { return false; }
    bool getAngle()    const { return false; }
 };
 
 
-
-class StubGps5050 : protected DummyGPS
+/************************
+* STUB GPS : DUMMY GPS
+* Stub class for the position
+* x = 50.0
+* y = 50.0
+*************************/
+class StubGps5050 : public DummyGPS
 {
    friend TestHandleCollision;
-   protected:
-      Position position = Position(50.0, 50.0);
+private:
+   void set() { position = Position(50.0, 50.0); }
+public:
+   StubGps5050() : DummyGPS() { set(); }
 };
-
-

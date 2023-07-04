@@ -34,14 +34,12 @@ private:
       // Set up
       StubGps5050 stubGps5050;
       StubBullet5050 stubBullet5050;
+
       Simulator sim;
       sim.orbitalObjects.push_back(&stubGps5050);
       sim.orbitalObjects.push_back(&stubBullet5050);
-
-
       //Exercise
       sim.handleCollision();
-
       //Verify
       assert(stubGps5050.isDead == true);
       assert(stubBullet5050.isDead == true);
@@ -56,7 +54,8 @@ private:
       StubGps5050 stubGps5050;
       StubBullet50150 stubBullet50150;
       Simulator sim;
-      sim.orbitalObjects = { &stubGps5050, &stubBullet50150 };
+      sim.orbitalObjects.push_back(&stubGps5050);
+      sim.orbitalObjects.push_back(&stubBullet50150);
 
       //Exercise
       sim.handleCollision();
@@ -90,7 +89,7 @@ private:
    {
       // Set up
       StubGps5050 stubGps5050;
-      StubBullet5050 stubBullet150150;
+      StubBullet150150 stubBullet150150;
       Simulator sim;
       sim.orbitalObjects = { &stubGps5050, &stubBullet150150 };
 

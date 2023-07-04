@@ -23,6 +23,7 @@ class PartGpsRight : public OrbitalObject
 {
    friend TestPart;
 public:
+   PartGpsRight() {}
    PartGpsRight(const GPS& rhs);
 };
 
@@ -36,6 +37,7 @@ class PartGpsLeft : public OrbitalObject
 {
    friend TestPart;
 public:
+   PartGpsLeft() {}
    PartGpsLeft(const GPS& rhs);
 };
 
@@ -49,5 +51,6 @@ class PartGpsCenter : public OrbitalObject
 {
    friend TestPart;
 public:
+   PartGpsCenter() {}
    PartGpsCenter(const GPS& rhs);
 };
