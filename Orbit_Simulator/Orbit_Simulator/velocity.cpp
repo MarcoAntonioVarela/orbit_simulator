@@ -23,3 +23,21 @@ void Velocity::update(const Acceleration & acceleration)
    dx = dx + acceleration.getDDX() * SECONDS_PER_FRAME;
    dy = dy + acceleration.getDDY() * SECONDS_PER_FRAME;
 }
+
+std::ostream& operator<<(std::ostream& out, const Velocity& v)
+{
+   out << "(" << v.getDX() << "m , " << v.getDY() << "m)";
+   return out;
+}
+
+std::istream& operator>>(std::istream& in, Velocity& a)
+{
+   double dx;
+   double dy;
+   in >> dx >> dy;
+
+   a.setDX(dx);
+   a.setDY(dy);
+
+   return in;
+}

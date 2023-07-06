@@ -7,7 +7,7 @@
 *    Change in Velocity in every frame
 ************************************************************************/
 #pragma once
-
+#include <iostream>
 
 class Angle;
 /**************
@@ -22,7 +22,15 @@ class Acceleration
       Acceleration() : ddx(0.0), ddy(0.0) {}
       Acceleration(Angle& angle, double acceleration);
 
+      // Getters
       double getDDX() const { return ddx; }
       double getDDY() const { return ddy; }
-      void update(const Angle& angle, double acceleration);
+      
+      // Setters
+      void setDDX(double ddx) { this->ddx = ddx; }
+      void setDDY(double ddy) { this->ddy = ddy; }
 };
+
+// stream I/O useful for debugging
+std::ostream& operator << (std::ostream& out, const Acceleration& a);
+std::istream& operator >> (std::istream& in, Acceleration& a);

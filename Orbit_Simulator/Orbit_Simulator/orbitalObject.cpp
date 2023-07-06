@@ -1,3 +1,12 @@
+/***********************************************************************
+* Source File:
+*    Orbital Object : Implementation of the Orbital Object class
+* Author:
+*    Efrain Gomez Fajardo
+* Summary:
+*    Implementation of the abstract base class that all the objects
+*    inside the list on Simulator
+************************************************************************/
 #include "orbitalObject.h"
 #include "acceleration.h"
 #include <cmath>
@@ -6,15 +15,12 @@ using namespace std;
 // Constants
 const double EARTH_RADIUS  = 6378000.0;          // radius
 const double EARTH_GRAVITY = -9.8067;            // gravity
-
-
 /*********************************************
 * UPDATE
 * Physics computations that happen every frame
 *********************************************/
 void OrbitalObject::update()
 {
-
    // Compute height
    // h = sqrt(x^2 + y^2)
    double height = sqrt((position.getMetersX() * position.getMetersX()) + (position.getMetersY() * position.getMetersY())) - EARTH_RADIUS;
@@ -24,8 +30,7 @@ void OrbitalObject::update()
    double gravity = -(EARTH_GRAVITY * ((EARTH_RADIUS / (EARTH_RADIUS + height)) * (EARTH_RADIUS / (EARTH_RADIUS + height))));
 
    // Compute acceleration
-   Acceleration acceleration;
-   acceleration.update(angle, gravity);
+   Acceleration acceleration(angle, gravity);
 
    // Compute velocity
    velocity.update(acceleration);
@@ -37,14 +42,12 @@ void OrbitalObject::update()
    angle.update(position);
 
    #ifdef DEBUG
-   cout << "Height: " << height << endl;
-   cout << "Gravity " << gravity << endl;
-   cout << "Pos   : " << position << endl;
-   cout << "DX    : " << velocity.getDX() << endl;
-   cout << "DY    : " << velocity.getDY() << endl;
-   cout << "DDX   : " << acceleration.getDDX() << endl;
-   cout << "DDY   : " << acceleration.getDDY() << endl;
-   cout << "Angle : " << angle.get() << endl << endl;
+   cout << "Height:    " << height        << endl;
+   cout << "Gravity:   " << gravity       << endl;
+   cout << "Pos:       " << position      << endl;
+   cout << "Vel:       " << velocity      << endl;
+   cout << "Acc:       " << acceleration  << endl;
+   cout << "Angle:     " << angle         << endl << endl;
    // cout << "Earth : " << pDemo->angleEarth << endl << endl;
    #endif
 }

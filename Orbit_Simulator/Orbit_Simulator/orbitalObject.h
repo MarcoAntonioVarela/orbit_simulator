@@ -34,6 +34,8 @@ public:
 
    // Getters
    Position getPosition() const { return position; }
+   Velocity getVelocity() const { return velocity; }
+   Angle    getAngle()    const { return angle; }
 
    // Used when collision happens
    void kill() { dead = true; }
@@ -41,6 +43,7 @@ public:
 
    // Virtual methods
    virtual void draw(ogstream & og) = 0;
+   
    void update();
 
 private:

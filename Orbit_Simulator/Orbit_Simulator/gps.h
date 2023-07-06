@@ -25,11 +25,6 @@ class GPS : public OrbitalObject
       GPS() : OrbitalObject() {};
       GPS(Position position, Velocity velocity, Angle angle) : OrbitalObject(position, velocity, angle) {};
 
-      // Getters
-      Position getPosition() const { return position; }
-      Velocity getVelocity() const { return velocity; }
-      Angle    getAngle()    const { return angle; }
-
       // Virtual methods
       void draw(ogstream& og)
       {

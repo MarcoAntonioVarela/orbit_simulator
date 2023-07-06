@@ -6,8 +6,8 @@
 * Summary:
 *    
 ************************************************************************/
-
 #pragma once
+#include <iostream>
 #define PI 3.1415926
 #define PI2  PI * 2
 
@@ -52,3 +52,7 @@ public:
    void update(const Position& position);
 
 };
+
+// stream I/O useful for debugging
+std::ostream& operator << (std::ostream& out, const Angle& a);
+std::istream& operator >> (std::istream& in, Angle& a);

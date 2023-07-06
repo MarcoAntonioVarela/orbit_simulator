@@ -65,3 +65,19 @@ void Angle::update(const Position& position)
 {
    aRadians = atan2(0 - position.getMetersX(), 0 - position.getMetersY());
 }
+
+std::ostream& operator<<(std::ostream& out, const Angle& a)
+{
+   out << a.get() << "radians";
+   return out;
+}
+
+std::istream& operator>>(std::istream& in, Angle& a)
+{
+   double aRadians;
+   in >> aRadians;
+
+   a.set(aRadians);
+
+   return in;
+}

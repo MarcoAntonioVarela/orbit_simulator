@@ -14,7 +14,7 @@
 * HANDLE COLLISION
 * When two objects's radius are in contact with each other, a collision
 * happens. This method sets that object to be killed, so later it can be
-* removed from the vector.
+* removed from the list.
 ************************************************************************/
 void Simulator::handleCollision()
 {
@@ -26,14 +26,14 @@ void Simulator::handleCollision()
 
 /***********************************************************************
 * DESTROY
-* When an object is marked as dead, it will be removed from the vector
+* When an object is marked as dead, it will be removed from the list
 ************************************************************************/
 void Simulator::destroy()
 {
    for (auto it = orbitalObjects.begin(); it != orbitalObjects.end(); /*Not incremeanting here*/)
       if ((*it)->isDead())
       {
-         delete* it;
+         delete *it;
          it = orbitalObjects.erase(it);
       }
       else
@@ -90,6 +90,7 @@ void Simulator::reset()
    GPS* gps4 =  new GPS(Position(0.0, -26560000.0),           Velocity(3880.0, 0.0),        Angle());
    GPS* gps5 = new GPS(Position(-23001634.72, -13280000.0),   Velocity(1940.0, -3360.18),   Angle());
    GPS* gps6 = new GPS(Position(-23001634.72, 13280000.0),    Velocity(-1940.0, -3360.18),  Angle());
+
 
    orbitalObjects.push_back(gps);
    orbitalObjects.push_back(gps2);

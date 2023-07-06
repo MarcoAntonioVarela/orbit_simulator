@@ -29,4 +29,12 @@ class Velocity
       // Getters
       double getDX() const { return dx; }
       double getDY() const { return dy; }
+
+      //Setters
+      void setDX(double dx) { this->dx = dx; }
+      void setDY(double dy) { this->dy = dy; }
 };
+
+// stream I/O useful for debugging
+std::ostream& operator << (std::ostream& out, const Velocity& v);
+std::istream& operator >> (std::istream& in, Velocity& v);

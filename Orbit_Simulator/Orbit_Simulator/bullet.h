@@ -33,7 +33,6 @@ public:
 /*****************************
 *  Dummy Bullet from Bullet
 ******************************/
-
 class DummyBullet : public Bullet
 {
 public:
