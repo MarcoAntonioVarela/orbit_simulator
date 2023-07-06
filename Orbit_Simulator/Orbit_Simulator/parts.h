@@ -25,6 +25,7 @@ class PartGpsRight : public OrbitalObject
 public:
    PartGpsRight() {}
    PartGpsRight(const GPS& rhs);
+   void draw(ogstream& og) { og.drawGPSRight(position, angle.get(), Position(10.0, 10.0)); }
 };
 
 /************************
@@ -39,6 +40,7 @@ class PartGpsLeft : public OrbitalObject
 public:
    PartGpsLeft() {}
    PartGpsLeft(const GPS& rhs);
+   void draw(ogstream& og) { og.drawGPSLeft(position, angle.get(), Position(-10.0, -10.0)); }
 };
 
 /************************
@@ -53,4 +55,5 @@ class PartGpsCenter : public OrbitalObject
 public:
    PartGpsCenter() {}
    PartGpsCenter(const GPS& rhs);
+   void draw(ogstream& og) { og.drawGPSCenter(position, angle.get()); }
 };

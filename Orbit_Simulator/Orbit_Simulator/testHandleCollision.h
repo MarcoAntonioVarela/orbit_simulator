@@ -41,8 +41,8 @@ private:
       //Exercise
       sim.handleCollision();
       //Verify
-      assert(stubGps5050.isDead == true);
-      assert(stubBullet5050.isDead == true);
+      assert(stubGps5050.dead == true);
+      assert(stubBullet5050.dead == true);
    }
 
    /*****************************************************
@@ -61,8 +61,8 @@ private:
       sim.handleCollision();
 
       //Verify
-      assert(stubGps5050.isDead == false);
-      assert(stubBullet50150.isDead == false);
+      assert(stubGps5050.dead == false);
+      assert(stubBullet50150.dead == false);
    }
    /*****************************************************
    * TESTING Scenario 3: Same Y, different X
@@ -79,8 +79,8 @@ private:
       sim.handleCollision();
 
       //Verify
-      assert(stubGps5050.isDead == false);
-      assert(stubBullet15050.isDead == false);
+      assert(stubGps5050.dead == false);
+      assert(stubBullet15050.dead == false);
    }
    /*****************************************************
    * TESTING Scenario 4: Different position
@@ -97,8 +97,8 @@ private:
       sim.handleCollision();
 
       //Verify
-      assert(stubGps5050.isDead == false);
-      assert(stubBullet150150.isDead == false);
+      assert(stubGps5050.dead == false);
+      assert(stubBullet150150.dead == false);
    }
 
 };

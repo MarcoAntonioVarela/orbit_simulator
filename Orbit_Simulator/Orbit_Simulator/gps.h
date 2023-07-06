@@ -13,7 +13,6 @@
 #include "angle.h"
 #pragma once
 
-
 /************************
 * GPS : ORBITAL OBJECT
 *************************/
@@ -21,11 +20,21 @@ class GPS : public OrbitalObject
 {
    friend class TestPart;
    public:
+
+      // Constructors
       GPS() : OrbitalObject() {};
       GPS(Position position, Velocity velocity, Angle angle) : OrbitalObject(position, velocity, angle) {};
+
+      // Getters
       Position getPosition() const { return position; }
       Velocity getVelocity() const { return velocity; }
-      Angle getAngle()       const { return angle; }
+      Angle    getAngle()    const { return angle; }
+
+      // Virtual methods
+      void draw(ogstream& og)
+      {
+         og.drawGPS(position, angle.get());
+      }
 };
 
 

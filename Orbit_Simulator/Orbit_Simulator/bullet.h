@@ -23,6 +23,10 @@ public:
    virtual Position getPosition() const { return position; }
    virtual Velocity getVelocity() const { return velocity; }
    virtual Angle    getAngle()    const { return angle; }
+   void draw(ogstream& og) 
+   {
+      og.drawProjectile(position);
+   }
 };
 
 

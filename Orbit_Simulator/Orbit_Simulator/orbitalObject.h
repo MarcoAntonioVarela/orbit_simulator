@@ -10,7 +10,9 @@
 #include "position.h"
 #include "velocity.h"
 #include "angle.h"
+#include "uiDraw.h"
 #include <cassert>
+
 #pragma once
 
 class TestHandleCollision;
@@ -30,10 +32,17 @@ public:
    OrbitalObject() : position(Position()), velocity(Velocity()), angle(Angle()) {}
    OrbitalObject(const Position& position, const Velocity& velocity, const Angle& angle) : position(position), velocity(velocity), angle(angle) {}
 
+   // Getters
    Position getPosition() const { return position; }
-   void kill() { isDead = true; }
+
+   // Used when collision happens
+   void kill() { dead = true; }
+   bool isDead() { return dead; }
+
+   // Virtual methods
+   virtual void draw(ogstream & og) = 0;
    //virtual void update() = 0;
 
 private:
-   bool isDead = false;
+   bool dead = false;
 };
