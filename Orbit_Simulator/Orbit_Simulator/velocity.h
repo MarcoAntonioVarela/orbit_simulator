@@ -25,4 +25,8 @@ class Velocity
       Velocity() : dx(0.0), dy(0.0) {}
       Velocity(double dx, double dy) : dx(dx), dy(dy) {}
       void update(const Acceleration & acceleration);
+
+      // Getters
+      double getDX() const { return dx; }
+      double getDY() const { return dy; }
 };

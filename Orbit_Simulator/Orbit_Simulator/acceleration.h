@@ -19,6 +19,9 @@ class Acceleration
       double ddx;
       double ddy;
    public:
+      Acceleration() : ddx(0.0), ddy(0.0) {}
+      Acceleration(Angle& angle, double acceleration);
+
       double getDDX() const { return ddx; }
       double getDDY() const { return ddy; }
       void update(const Angle& angle, double acceleration);

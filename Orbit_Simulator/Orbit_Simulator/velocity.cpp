@@ -20,6 +20,6 @@ const double SECONDS_PER_FRAME = 48.0;         // time
 ************************************************************************/
 void Velocity::update(const Acceleration & acceleration)
 {
-   dx += acceleration.getDDX() * SECONDS_PER_FRAME;
-   dy += acceleration.getDDY() * SECONDS_PER_FRAME;
+   dx = dx + acceleration.getDDX() * SECONDS_PER_FRAME;
+   dy = dy + acceleration.getDDY() * SECONDS_PER_FRAME;
 }

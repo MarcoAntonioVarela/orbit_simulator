@@ -129,7 +129,8 @@
   <ItemGroup>
     <ClCompile Include="acceleration.cpp" />
     <ClCompile Include="angle.cpp" />
-    <ClCompile Include="Orbit_Simulator.cpp" />
+    <ClCompile Include="orbitalObject.cpp" />
+    <ClCompile Include="main.cpp" />
     <ClCompile Include="parts.cpp" />
     <ClCompile Include="position.cpp" />
     <ClCompile Include="simulator.cpp" />

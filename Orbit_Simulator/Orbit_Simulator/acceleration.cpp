@@ -12,6 +12,13 @@
 #include "angle.h"
 #include <cmath>
 
+
+Acceleration::Acceleration(Angle& angle, double acceleration)
+{
+   ddx = acceleration * sin(angle.get());
+   ddy = acceleration * cos(angle.get());
+}
+
 /***********************************************************************
 * UPDATE
 * Every frame this function is called. It updates the position

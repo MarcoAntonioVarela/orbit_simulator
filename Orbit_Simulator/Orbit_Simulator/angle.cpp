@@ -7,6 +7,8 @@
 *     Where each Orbital Object is facing. 0 is up
 ************************************************************************/
 #include "angle.h"
+#include "position.h"
+#include <cmath>
 
 // Default constructor.
 Angle::Angle() : aRadians(0.0) {}
@@ -57,4 +59,9 @@ double Angle::normalize(double radians)
 void Angle::set(double radians)
 {
    aRadians = normalize(radians);
+}
+
+void Angle::update(const Position& position)
+{
+   aRadians = atan2(0 - position.getMetersX(), 0 - position.getMetersY());
 }

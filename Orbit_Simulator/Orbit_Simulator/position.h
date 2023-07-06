@@ -7,18 +7,18 @@
  *    Everything we need to know about a location on the screen
  *    or the location on the field.
  ************************************************************************/
-
-
 #pragma once
 
 #include <iostream> 
 #include <cmath>
 
 class TestPosition;
+class TestPart;
 class Acceleration;
 class Velocity;
-class TestPart;
 
+
+const double SECONDS_PER_FRAME = 48.0;           // time
 /*********************************************
  * Position
  * A single position on the field in Meters  
@@ -59,6 +59,9 @@ public:
       this->metersFromPixels = metersFromPixels;
    }
    double getZoom() const { return metersFromPixels; }
+
+   // making the calculations needed
+   void update(const Velocity& velocity, const Acceleration& acceleration);
 
 private:
    double x;                 // horizontal position

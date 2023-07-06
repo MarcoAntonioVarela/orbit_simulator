@@ -12,6 +12,7 @@
 #define PI2  PI * 2
 
 class TestPart;
+class Position;
 
 /***********************************
 * CLASS ANGLE
@@ -46,4 +47,8 @@ public:
 
    // Stores the given angle.
    void set(double radians);
+
+   // updating every frame.
+   void update(const Position& position);
+
 };

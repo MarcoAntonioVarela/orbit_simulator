@@ -42,7 +42,7 @@ void Simulator::destroy()
 
 /***********************************************************************
 * ADD
-* Helper method to easy add element to the vector of objects.
+* Helper method to easy add element to the list of objects.
 * Every time something needs to be added, it is used here
 ************************************************************************/
 void Simulator::add(OrbitalObject*& object)
@@ -70,8 +70,11 @@ void Simulator::draw(ogstream& og)
 ************************************************************************/
 void Simulator::update()
 {
-   handleCollision();
-   destroy();
+   for (auto object : orbitalObjects)
+      object->update();
+
+   /*handleCollision();
+   destroy();*/
 }
 
 /***********************************************************************
@@ -81,11 +84,23 @@ void Simulator::update()
 ************************************************************************/
 void Simulator::reset()
 {
-   GPS* gps  = new GPS(Position(0.0, 26560000.0),           Velocity(-3880.0, 0.0),      Angle());
-   GPS* gps2 = new GPS(Position(23001634.72, 13280000.0),   Velocity(-1940.0, 3360.18),  Angle());
-   GPS* gps3 = new GPS(Position(-23001634.72, -13280000.0), Velocity(1940.0, 3360.18),   Angle());
+   GPS* gps  = new GPS(Position(0.0, 26560000.0),             Velocity(-3880.0, 0.0),       Angle());
+   GPS* gps2 = new GPS(Position(23001634.72, 13280000.0),     Velocity(-1940.0, 3360.18),   Angle());
+   GPS* gps3 = new GPS(Position(23001634.72, -13280000.0),    Velocity(1940.0,  3360.18),   Angle());
+   GPS* gps4 =  new GPS(Position(0.0, -26560000.0),           Velocity(3880.0, 0.0),        Angle());
+   GPS* gps5 = new GPS(Position(-23001634.72, -13280000.0),   Velocity(1940.0, -3360.18),   Angle());
+   GPS* gps6 = new GPS(Position(-23001634.72, 13280000.0),    Velocity(-1940.0, -3360.18),  Angle());
 
    orbitalObjects.push_back(gps);
    orbitalObjects.push_back(gps2);
    orbitalObjects.push_back(gps3);
+   orbitalObjects.push_back(gps4);
+   orbitalObjects.push_back(gps5);
+   orbitalObjects.push_back(gps6);
+
+   // Testing with the gps from Lab 07
+   #ifdef DEBUG
+   GPS* test = new GPS(Position(0.0, 42164000.0), Velocity(-3100.0, 0.0), Angle());
+   orbitalObjects.push_back(test);
+   #endif
 }
