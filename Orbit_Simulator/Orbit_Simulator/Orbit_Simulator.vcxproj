@@ -143,11 +143,15 @@
     <ClInclude Include="acceleration.h" />
     <ClInclude Include="angle.h" />
     <ClInclude Include="bullet.h" />
+    <ClInclude Include="dragon.h" />
     <ClInclude Include="gps.h" />
+    <ClInclude Include="hubble.h" />
     <ClInclude Include="orbitalObject.h" />
     <ClInclude Include="parts.h" />
     <ClInclude Include="position.h" />
     <ClInclude Include="simulator.h" />
+    <ClInclude Include="sputnik.h" />
+    <ClInclude Include="starlink.h" />
     <ClInclude Include="test.h" />
     <ClInclude Include="testHandleCollision.h" />
     <ClInclude Include="testPart.h" />

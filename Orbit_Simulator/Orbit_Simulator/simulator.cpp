@@ -9,6 +9,20 @@
 #include "simulator.h"
 #include "gps.h"
 #include "bullet.h"
+#include "sputnik.h"
+#include "hubble.h"
+#include "dragon.h"
+#include "starlink.h"
+
+
+// Temporarly here. Where should it go?
+#define PI     3.1415926535
+double angleEarth = 0.0;
+
+// Constants, also temporary
+const double FRAME_RATE = 30.0;              // frame rate
+const double SECONDS_PER_DAY = 86400.0;      // seconds in a day
+const double TIME_DILATION = 1440.0;         // time dilation
 
 /***********************************************************************
 * HANDLE COLLISION
@@ -57,7 +71,7 @@ void Simulator::add(OrbitalObject*& object)
 ************************************************************************/
 void Simulator::draw(ogstream& og)
 {
-   og.drawEarth(Position(), 0.0);
+   og.drawEarth(Position(), angleEarth);
 
    for (auto object : orbitalObjects)
       object->draw(og);
@@ -70,6 +84,10 @@ void Simulator::draw(ogstream& og)
 ************************************************************************/
 void Simulator::update()
 {
+
+   // Updating earth's rotation
+   angleEarth -= (((2 * PI) / FRAME_RATE) * (TIME_DILATION / SECONDS_PER_DAY));
+
    for (auto object : orbitalObjects)
       object->update();
 
@@ -84,20 +102,38 @@ void Simulator::update()
 ************************************************************************/
 void Simulator::reset()
 {
+
+   // Creating all the GPS
    GPS* gps  = new GPS(Position(0.0, 26560000.0),             Velocity(-3880.0, 0.0),       Angle());
    GPS* gps2 = new GPS(Position(23001634.72, 13280000.0),     Velocity(-1940.0, 3360.18),   Angle());
    GPS* gps3 = new GPS(Position(23001634.72, -13280000.0),    Velocity(1940.0,  3360.18),   Angle());
-   GPS* gps4 =  new GPS(Position(0.0, -26560000.0),           Velocity(3880.0, 0.0),        Angle());
+   GPS* gps4 = new GPS(Position(0.0, -26560000.0),            Velocity(3880.0, 0.0),        Angle());
    GPS* gps5 = new GPS(Position(-23001634.72, -13280000.0),   Velocity(1940.0, -3360.18),   Angle());
    GPS* gps6 = new GPS(Position(-23001634.72, 13280000.0),    Velocity(-1940.0, -3360.18),  Angle());
 
+   // Creating Sputnik
+   Sputnik* sputnik = new Sputnik(Position(-36515095.13, 21082000.0), Velocity(2050.0, 2684.68), Angle());
 
+   // Creating Hubble
+   Hubble* hubble = new Hubble(Position(0.0, -42164000.0), Velocity(3100.0, 0.0), Angle());
+
+   // Creating Crew Dragon
+   Dragon* dragon = new Dragon(Position(0.0, 8000000.0), Velocity(-7900.0, 0.0), Angle());
+
+   // Creating Starlink
+   Starlink* starlink = new Starlink(Position(0.0, -13020000.0), Velocity(5800.0, 0.0), Angle());
+
+   // Adding them to the list
    orbitalObjects.push_back(gps);
    orbitalObjects.push_back(gps2);
    orbitalObjects.push_back(gps3);
    orbitalObjects.push_back(gps4);
    orbitalObjects.push_back(gps5);
    orbitalObjects.push_back(gps6);
+   orbitalObjects.push_back(sputnik);
+   orbitalObjects.push_back(hubble);
+   orbitalObjects.push_back(dragon);
+   orbitalObjects.push_back(starlink);
 
    // Testing with the gps from Lab 07
    #ifdef DEBUG
