@@ -113,6 +113,9 @@
     <ClInclude Include="dreamChaser.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="expiringObject.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

@@ -1,4 +1,5 @@
-﻿  simulator.cpp
+﻿  bullet.cpp
+  simulator.cpp
   test.cpp
   Generating Code...
   Orbit_Simulator.vcxproj -> D:\Programming\CSE231\orbit_simulator\Orbit_Simulator\x64\Debug\Orbit_Simulator.exe

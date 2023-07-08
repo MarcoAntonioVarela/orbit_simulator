@@ -38,6 +38,7 @@ public:
    Angle() : aRadians(0.0) {};
    Angle(const Angle& rhs) : aRadians(rhs.aRadians) {};
    Angle(double degrees);
+   Angle& operator = (const Angle& v);
 
    // Return the angle.
    double get() const { return aRadians; }
@@ -67,6 +68,7 @@ public:
       // return old value
       return angReturn;
    }
+
 };
 
 // stream I/O useful for debugging

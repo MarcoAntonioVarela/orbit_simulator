@@ -147,6 +147,7 @@
     <ClInclude Include="bullet.h" />
     <ClInclude Include="dragon.h" />
     <ClInclude Include="dreamChaser.h" />
+    <ClInclude Include="expiringObject.h" />
     <ClInclude Include="gps.h" />
     <ClInclude Include="hubble.h" />
     <ClInclude Include="orbitalObject.h" />

@@ -41,3 +41,14 @@ std::istream& operator>>(std::istream& in, Velocity& a)
 
    return in;
 }
+
+/******************************************
+ * VELOCITY : ASSIGNMENT
+ * Assign a velocity
+ *****************************************/
+Velocity& Velocity::operator = (const Velocity& v)
+{
+   dx = v.dx;
+   dy = v.dy;
+   return *this;
+}

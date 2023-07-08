@@ -7,19 +7,19 @@
 *    The atttributes and methods related to bullet.
 ************************************************************************/
 
-#include "orbitalObject.h"
+#include "expiringObject.h"
 #pragma once
 
 
 /************************
 * BULLET : ORBITAL OBJECT
 *************************/
-class Bullet : public OrbitalObject
+class Bullet : public ExpiringObject
 {
    friend class TestPart;
 public:
-   Bullet() : OrbitalObject() {}
-   Bullet(const Position& position, const Velocity& velocity, const Angle& angle);
+   Bullet() : ExpiringObject() {}
+   Bullet(const Position& position, const Velocity& velocity, const Angle& angle, double timePassed);
    virtual Position getPosition() const { return position; }
    virtual Velocity getVelocity() const { return velocity; }
    virtual Angle    getAngle()    const { return angle; }

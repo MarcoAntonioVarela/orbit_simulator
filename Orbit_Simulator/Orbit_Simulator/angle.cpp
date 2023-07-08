@@ -19,7 +19,6 @@ Angle::Angle(double degrees)
    aRadians = convertToRadians(degrees);
 }
 
-
 /**********************************************
 * ANGLE : CONVERT TO RADIANS
 * Used by the non-default constructor.
@@ -73,6 +72,16 @@ void Angle::set(double radians)
 void Angle::update(const Position& position)
 {
    aRadians = atan2(0 - position.getMetersX(), 0 - position.getMetersY());
+}
+
+/******************************************
+ * POINT : ASSIGNMENT
+ * Assign a point
+ *****************************************/
+Angle& Angle::operator = (const Angle& a)
+{
+   aRadians = a.aRadians;
+   return *this;
 }
 
 std::ostream& operator<<(std::ostream& out, const Angle& a)

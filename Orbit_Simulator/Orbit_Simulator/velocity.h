@@ -25,6 +25,7 @@ class Velocity
       // Constructors
       Velocity() : dx(0.0), dy(0.0) {}
       Velocity(double dx, double dy) : dx(dx), dy(dy) {}
+      Velocity& operator = (const Velocity& v);
 
       void update(const Acceleration & acceleration);
 

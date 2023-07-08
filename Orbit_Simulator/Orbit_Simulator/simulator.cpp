@@ -14,6 +14,7 @@
 #include "dragon.h"
 #include "starlink.h"
 #include "dreamChaser.h"
+#include "bullet.h"
 using namespace std;
 
 
@@ -107,7 +108,8 @@ void Simulator::update(const Interface*& pUI)
    destroy();
 
    // Creating bullets as necessary
-   
+   if (pUI->isSpace())
+      orbitalObjects.push_back(new Bullet(dreamChaser->getPosition(), dreamChaser->getVelocity(), dreamChaser->getAngle(), 1000.0));
    // Moving the Dream Chaser
    dreamChaser->move(pUI);
 }
