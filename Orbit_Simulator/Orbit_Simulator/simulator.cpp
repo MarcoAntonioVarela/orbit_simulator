@@ -13,6 +13,7 @@
 #include "hubble.h"
 #include "dragon.h"
 #include "starlink.h"
+#include "dreamChaser.h"
 
 
 // Temporarly here. Where should it go?
@@ -101,10 +102,9 @@ void Simulator::update()
 * simulator to the first stage where everything should be.
 ************************************************************************/
 void Simulator::reset()
-{
-
+{  
    // Creating all the GPS
-   GPS* gps  = new GPS(Position(0.0, 26560000.0),             Velocity(-3880.0, 0.0),       Angle());
+   GPS* gps1 = new GPS(Position(0.0, 26560000.0),             Velocity(-3880.0, 0.0),       Angle());
    GPS* gps2 = new GPS(Position(23001634.72, 13280000.0),     Velocity(-1940.0, 3360.18),   Angle());
    GPS* gps3 = new GPS(Position(23001634.72, -13280000.0),    Velocity(1940.0,  3360.18),   Angle());
    GPS* gps4 = new GPS(Position(0.0, -26560000.0),            Velocity(3880.0, 0.0),        Angle());
@@ -123,8 +123,11 @@ void Simulator::reset()
    // Creating Starlink
    Starlink* starlink = new Starlink(Position(0.0, -13020000.0), Velocity(5800.0, 0.0), Angle());
 
+   // Creating Dream Chaser
+   DreamChaser* dreamChaser = new DreamChaser(Position(/*Upper left of the screen*/), Velocity(0.0, -2000.0), Angle());
+
    // Adding them to the list
-   orbitalObjects.push_back(gps);
+   orbitalObjects.push_back(gps1);
    orbitalObjects.push_back(gps2);
    orbitalObjects.push_back(gps3);
    orbitalObjects.push_back(gps4);
@@ -134,6 +137,7 @@ void Simulator::reset()
    orbitalObjects.push_back(hubble);
    orbitalObjects.push_back(dragon);
    orbitalObjects.push_back(starlink);
+   orbitalObjects.push_back(dreamChaser);
 
    // Testing with the gps from Lab 07
    #ifdef DEBUG

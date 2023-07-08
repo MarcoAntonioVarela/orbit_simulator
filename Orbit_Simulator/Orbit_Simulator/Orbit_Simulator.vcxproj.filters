@@ -48,6 +48,9 @@
     <ClCompile Include="orbitalObject.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="dreamChaser.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="testHandleCollision.h">
@@ -102,6 +105,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="starlink.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dreamChaser.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
