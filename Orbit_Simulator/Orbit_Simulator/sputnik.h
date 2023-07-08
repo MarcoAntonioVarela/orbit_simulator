@@ -16,6 +16,9 @@
 class Sputnik : public OrbitalObject
 {
 public:
+   double getRadius() {
+      return 1.0;
+   }
 
    // Constructors
    Sputnik() : OrbitalObject() {}

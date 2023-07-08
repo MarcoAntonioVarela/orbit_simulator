@@ -7,16 +7,17 @@
 *   Implementation for the Simulator class
 ************************************************************************/
 #include "simulator.h"
+#include "uiInteract.h"
 #include "gps.h"
 #include "sputnik.h"
 #include "hubble.h"
 #include "dragon.h"
 #include "starlink.h"
 #include "dreamChaser.h"
+using namespace std;
 
 
 // Temporarly here. Where should it go?
-#define PI     3.1415926535
 double angleEarth = 0.0;
 
 // Constants, also temporary
@@ -30,12 +31,21 @@ const double TIME_DILATION = 1440.0;         // time dilation
 * happens. This method sets that object to be killed, so later it can be
 * removed from the list.
 ************************************************************************/
+
+
 void Simulator::handleCollision()
 {
-   //for (auto it = orbitalObjects.begin(); it != orbitalObjects.end(); /*Not incremeanting here*/)
-   //{
-   //   // Implement collision here
-   //}
+   for (auto it = orbitalObjects.begin(); it != orbitalObjects.end(); /*Not incremeanting here*/)
+   {
+      // Check collision between 
+      if (computeDistance((*it)->getPosition(), (next(*it))->getPosition()) <= 0.0)
+      {
+         (*it)->kill();
+         (next(*it))->kill();
+      }
+      else
+         ++it;
+   }
 }
 
 /***********************************************************************
@@ -83,21 +93,22 @@ void Simulator::draw(ogstream& og)
 * This function is called on callback. its purpose is to update everything
 * that is happening on the simulation
 ************************************************************************/
-void Simulator::update()
+void Simulator::update(const Interface*& pUI)
 {
-
    // Updating earth's rotation
    angleEarth -= (((2 * PI) / FRAME_RATE) * (TIME_DILATION / SECONDS_PER_DAY));
 
+   // All the current objects in the simulation
    for (auto object : orbitalObjects)
       object->update();
 
-   /*handleCollision();
-   destroy();*/
-}
+   // Check if an object needs to be destroyed
+   handleCollision();
+   destroy();
 
-void Simulator::input(const Interface*& pUI)
-{
+   // Creating bullets as necessary
+   
+   // Moving the Dream Chaser
    dreamChaser->move(pUI);
 }
 
@@ -111,7 +122,7 @@ void Simulator::reset()
    // Initialize the Dream Chaser
    dreamChaser = new DreamChaser(Position(-36515095.13, 21085000.0/*Upper left of the screen*/), Velocity(0.0, -2000.0), Angle());
 
-   // Creating all the GPS
+   //// Creating all the GPS
    GPS* gps1 = new GPS(Position(0.0, 26560000.0),             Velocity(-3880.0, 0.0),       Angle());
    GPS* gps2 = new GPS(Position(23001634.72, 13280000.0),     Velocity(-1940.0, 3360.18),   Angle());
    GPS* gps3 = new GPS(Position(23001634.72, -13280000.0),    Velocity(1940.0,  3360.18),   Angle());
@@ -131,7 +142,7 @@ void Simulator::reset()
    // Creating Starlink
    Starlink* starlink = new Starlink(Position(0.0, -13020000.0), Velocity(5800.0, 0.0), Angle());
 
-   // Adding them to the list
+   //// Adding them to the list
    orbitalObjects.push_back(gps1);
    orbitalObjects.push_back(gps2);
    orbitalObjects.push_back(gps3);

@@ -20,6 +20,9 @@ class GPS : public OrbitalObject
 {
    friend class TestPart;
    public:
+      double getRadius() {
+         return 12.0;
+      }
 
       // Constructors
       GPS() : OrbitalObject() {};

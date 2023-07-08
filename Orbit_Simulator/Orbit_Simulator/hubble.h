@@ -16,7 +16,9 @@
 class Hubble : public OrbitalObject
 {
 public:
-
+   double getRadius() {
+      return 10.0;
+   }
    // Constructors
    Hubble() : OrbitalObject() {}
    Hubble(Position position, Velocity velocity, Angle angle) : OrbitalObject(position, velocity, angle) {}

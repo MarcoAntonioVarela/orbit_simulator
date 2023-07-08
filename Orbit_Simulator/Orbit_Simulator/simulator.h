@@ -29,8 +29,7 @@ public:
    // Public functions
    void add(OrbitalObject*& object);
    void draw(ogstream& og);
-   void update();
-   void input(const Interface*& pUI);
+   void update(const Interface*& pUI);
 
 private:
    DreamChaser* dreamChaser;

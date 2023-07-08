@@ -2,7 +2,7 @@
  * Header File:
  *    Point : The representation of a position 
  * Author:
- *    Br. Helfrich
+ *    Br. Helfrich, Efrain Gomez Fajardo
  * Summary:
  *    Everything we need to know about a location on the screen
  *    or the location on the field.

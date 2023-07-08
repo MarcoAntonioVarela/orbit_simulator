@@ -15,6 +15,9 @@
 class Starlink : public OrbitalObject
 {
 public:
+   double getRadius() {
+      return 6.0;
+   }
 
    // Constructors
    Starlink() : OrbitalObject() {}

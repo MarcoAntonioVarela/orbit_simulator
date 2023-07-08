@@ -16,6 +16,10 @@ class Dragon : public OrbitalObject
 {
 public:
 
+   double getRadius() {
+      return 7.0;
+   }
+
    // Constructors
    Dragon() : OrbitalObject() {}
    Dragon(Position position, Velocity velocity, Angle angle) : OrbitalObject(position, velocity, angle) {}

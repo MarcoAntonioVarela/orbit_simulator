@@ -19,7 +19,7 @@ class Bullet : public OrbitalObject
    friend class TestPart;
 public:
    Bullet() : OrbitalObject() {}
-   Bullet(const Position& position, const Velocity& velocity, const Angle& angle) : OrbitalObject(position, velocity, angle) {}
+   Bullet(const Position& position, const Velocity& velocity, const Angle& angle);
    virtual Position getPosition() const { return position; }
    virtual Velocity getVelocity() const { return velocity; }
    virtual Angle    getAngle()    const { return angle; }
@@ -27,6 +27,7 @@ public:
    {
       og.drawProjectile(position);
    }
+   double getRadius() { return 1.0;}
 };
 
 

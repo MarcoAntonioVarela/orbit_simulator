@@ -25,9 +25,6 @@ class Angle
 private:
    double aRadians;
 
-   // Converts radians into degrees.
-   double convertToDegrees(double radians);
-
    // Converts degrees into radians.
    double convertToRadians(double degrees);
 
@@ -38,8 +35,8 @@ private:
 public:
 
    //Constructors
-   Angle();
-   Angle(const Angle& rhs);
+   Angle() : aRadians(0.0) {};
+   Angle(const Angle& rhs) : aRadians(rhs.aRadians) {};
    Angle(double degrees);
 
    // Return the angle.

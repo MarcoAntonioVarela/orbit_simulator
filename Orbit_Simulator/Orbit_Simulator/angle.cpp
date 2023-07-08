@@ -9,36 +9,33 @@
 #include "angle.h"
 #include "position.h"
 #include <cmath>
-
-// Default constructor.
-Angle::Angle() : aRadians(0.0) {}
-
-// Copy constructor.
-Angle::Angle(const Angle& rhs)
-{
-   aRadians = rhs.aRadians;
-}
-
-// Non-default constructor.
+   
+/**********************************************
+* NON-DEFAULT CONSTRUCTOR
+* Takes the angle in degrees and converts them in radians
+***********************************************/
 Angle::Angle(double degrees)
 {
    aRadians = convertToRadians(degrees);
 }
 
-// Converts radians into degrees.
-double Angle::convertToDegrees(double radians)
-{
-   return radians * (180.0 / PI);
-}
 
-// Converts degrees into radians.
+/**********************************************
+* ANGLE : CONVERT TO RADIANS
+* Used by the non-default constructor.
+* Uses the math formula:
+* radians = degrees / (180 / PI)
+***********************************************/
 double Angle::convertToRadians(double degrees)
 {
    return degrees / (180.0 / PI);
 }
 
-// Converts an angle above
-// 0 and 2 Pi to be between that range.
+/**********************************************
+* ANGLE : NORMALIZE
+* Converts an angle above
+* 0 and 2 PI to be between that range.
+***********************************************/
 double Angle::normalize(double radians)
 {
    while (radians < 0 || radians > PI2)
@@ -55,12 +52,24 @@ double Angle::normalize(double radians)
    return radians;
 }
 
-// Stores the given angle.
+/**********************************************
+* ANGLE : SET
+* Helper function used to modify the radians 
+***********************************************/
 void Angle::set(double radians)
 {
    aRadians = normalize(radians);
 }
 
+/**********************************************
+* ANGLE : UPDATE
+* Changes the angle based on the math formula:
+* radians = atan(xe - xs, ye - ys) where
+* xe : Position in x of the Earth
+* ye : Position in y of the Earth
+* xs : Position in x of the satellite
+* ys : Position in y of the satellite
+***********************************************/
 void Angle::update(const Position& position)
 {
    aRadians = atan2(0 - position.getMetersX(), 0 - position.getMetersY());

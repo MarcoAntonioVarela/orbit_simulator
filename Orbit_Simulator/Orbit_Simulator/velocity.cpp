@@ -4,7 +4,7 @@
 * Author:
 *    Efrain Gomez Fajardo
 * Summary:
-*    
+*    It is defined as a change in position over time.
 ************************************************************************/
 
 #include "acceleration.h"

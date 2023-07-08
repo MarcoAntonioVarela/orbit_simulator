@@ -17,7 +17,9 @@ class Interface;
 class DreamChaser : public OrbitalObject
 {
 public:
-
+   double getRadius() {
+      return 10.0;
+   }
    // Constructors
    DreamChaser() : OrbitalObject() {}
    DreamChaser(Position position, Velocity velocity, Angle angle) : OrbitalObject(position, velocity, angle) {}

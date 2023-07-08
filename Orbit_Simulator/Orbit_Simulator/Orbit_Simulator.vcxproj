@@ -129,6 +129,7 @@
   <ItemGroup>
     <ClCompile Include="acceleration.cpp" />
     <ClCompile Include="angle.cpp" />
+    <ClCompile Include="bullet.cpp" />
     <ClCompile Include="dreamChaser.cpp" />
     <ClCompile Include="orbitalObject.cpp" />
     <ClCompile Include="main.cpp" />

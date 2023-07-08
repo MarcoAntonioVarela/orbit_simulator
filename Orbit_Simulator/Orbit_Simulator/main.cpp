@@ -37,11 +37,8 @@ void callBack(const Interface* pUI, void* p)
    Position pt;
    ogstream gout(pt);
 
-   // this updates the Dream Chaser
-   pSimulator->input(pUI);
-
    // changing everything that is on the screen
-   pSimulator->update();
+   pSimulator->update(pUI);
 
    // draw orbital objects
    pSimulator->draw(gout);

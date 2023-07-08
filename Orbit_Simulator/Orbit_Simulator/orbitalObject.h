@@ -44,6 +44,8 @@ public:
    // Virtual methods
    virtual void draw(ogstream & og) = 0;
    virtual void update();
+   virtual double getRadius() = 0;
+
 
 private:
    bool dead = false;
