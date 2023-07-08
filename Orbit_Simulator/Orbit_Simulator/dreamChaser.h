@@ -34,11 +34,10 @@ public:
    // For getting keystrokes so it can move
    void move(const Interface*& pUI);
 
+private:
+   bool thrust = false;
+
    // Changing the thrust
    void fireThruster() { thrust = true; }
    void stopThruster() { thrust = false; }
-
-
-private:
-   bool thrust = false;
 };

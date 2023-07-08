@@ -32,7 +32,7 @@ void Acceleration::update(Angle& angle, double acceleration)
 
 std::ostream& operator<<(std::ostream& out, const Acceleration& a)
 {
-   out << "(" << a.getDDX() << "m , " << a.getDDY() << "m)";
+   out << "(" << a.getDDX() << "m/s2 , " << a.getDDY() << "m/s2)";
    return out;
 }
 

@@ -26,7 +26,7 @@ void Velocity::update(const Acceleration & acceleration)
 
 std::ostream& operator<<(std::ostream& out, const Velocity& v)
 {
-   out << "(" << v.getDX() << "m , " << v.getDY() << "m)";
+   out << "(" << v.getDX() << "m/s , " << v.getDY() << "m/s)";
    return out;
 }
 
