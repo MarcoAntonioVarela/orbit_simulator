@@ -7,11 +7,12 @@
 *   Orbit simulator
 ************************************************************************/
 #pragma once
-#include <list>
 #include "orbitalObject.h"
+#include "dreamChaser.h"
+#include <list>
 
 class TestHandleCollision;
-
+class Interface;
 /*********************************************
 * SIMULATOR
 * The main logic for the simulator
@@ -29,9 +30,10 @@ public:
    void add(OrbitalObject*& object);
    void draw(ogstream& og);
    void update();
-   void input();
+   void input(const Interface*& pUI);
 
 private:
+   DreamChaser* dreamChaser;
    std::list<OrbitalObject*> orbitalObjects;
    Position ptUpperRight;           // Size of the screen.
 

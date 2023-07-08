@@ -51,6 +51,25 @@ public:
    // updating every frame.
    void update(const Position& position);
 
+   // postfix incrment x++
+   // one operand: this
+   Angle operator++(int postfix)
+   {
+      Angle angReturn(*this);
+      aRadians += 0.1;
+      // return old value
+      return angReturn;
+   }
+
+   // postfix decremeant x++
+   // one operand: this
+   Angle operator--(int postfix)
+   {
+      Angle angReturn(*this);
+      aRadians -= 0.1;
+      // return old value
+      return angReturn;
+   }
 };
 
 // stream I/O useful for debugging

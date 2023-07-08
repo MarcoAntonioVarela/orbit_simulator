@@ -43,8 +43,7 @@ public:
 
    // Virtual methods
    virtual void draw(ogstream & og) = 0;
-   
-   void update();
+   virtual void update();
 
 private:
    bool dead = false;

@@ -37,16 +37,14 @@ void callBack(const Interface* pUI, void* p)
    Position pt;
    ogstream gout(pt);
 
-   // draw orbital objects
-   pSimulator->draw(gout);
+   // this updates the Dream Chaser
+   pSimulator->input(pUI);
 
    // changing everything that is on the screen
    pSimulator->update();
 
-   // getting user input for the Dream Chaser
-
-   // rotate the earth
-   // pDemo->angleEarth -= (((2 * PI) / FRAME_RATE) * (TIME_DILATION / SECONDS_PER_DAY));
+   // draw orbital objects
+   pSimulator->draw(gout);
 
 }
 

@@ -11,7 +11,6 @@
 #include "orbitalObject.h"
 
 class Interface;
-
 /************************
 * DREAM CHASER : ORBITAL OBJECT
 *************************/
@@ -28,9 +27,13 @@ public:
    {
       og.drawShip(position, angle.get(), thrust);
    }
+   
+   // virtual override
+   void update();
 
    // For getting keystrokes so it can move
    void move(const Interface*& pUI);
+
 
 private:
    bool thrust = false;
