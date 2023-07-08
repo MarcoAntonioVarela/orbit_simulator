@@ -1,2 +1,8 @@
 ﻿  dreamChaser.cpp
+  main.cpp
+  simulator.cpp
+D:\Programming\CSE231\orbit_simulator\Orbit_Simulator\Orbit_Simulator\simulator.cpp(19,1): warning C4005: 'PI': macro redefinition
+D:\Programming\CSE231\orbit_simulator\Orbit_Simulator\Orbit_Simulator\angle.h(11,1): message : see previous definition of 'PI'
+  test.cpp
+  Generating Code...
   Orbit_Simulator.vcxproj -> D:\Programming\CSE231\orbit_simulator\Orbit_Simulator\x64\Debug\Orbit_Simulator.exe

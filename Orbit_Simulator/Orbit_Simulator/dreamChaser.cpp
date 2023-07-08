@@ -21,7 +21,7 @@ const double EARTH_RADIUS = 6378000.0;           // radius
 * Since the angle is changed by the user, we
 * are not calling angle::update
 **************************************************/
-void DreamChaser::update()
+void DreamChaser::update(double thruster)
 {
    // Compute height
    // h = sqrt(x^2 + y^2)
@@ -32,7 +32,8 @@ void DreamChaser::update()
    double gravity = -(EARTH_GRAVITY * ((EARTH_RADIUS / (EARTH_RADIUS + height)) * (EARTH_RADIUS / (EARTH_RADIUS + height))));
 
    // Compute acceleration
-   Acceleration acceleration(angle, gravity);
+   Acceleration acceleration;
+   acceleration.update(angle, gravity + thruster);
 
    // Compute velocity
    velocity.update(acceleration);
@@ -47,7 +48,6 @@ void DreamChaser::update()
    cout << "Vel:       " << velocity << endl;
    cout << "Acc:       " << acceleration << endl;
    cout << "Angle:     " << angle << endl << endl;
-   // cout << "Earth : " << pDemo->angleEarth << endl << endl;
 #endif
 }
 
@@ -58,23 +58,24 @@ void DreamChaser::update()
 **************************************************/
 void DreamChaser::move(const Interface*& pUI)
 {
+   double thruster = 0.0;
    if (pUI->isDown())
    {
       // Accelerate 2.0 m/s2
-   }
-   else if (pUI->isUp())
-   {
-      // ???
+      thruster = 2.0;
+      fireThruster();
    }
    else if (pUI->isRight())
    {
       // Angle changes 0.1 radians to the right
-      angle--;
+      angle++;
+      stopThruster();
    }
    else if (pUI->isLeft())
    {
       // Angle changes 0.1 radians to the left
-      angle++;
+      angle--;
+      stopThruster();
    }
-   update();
+   update(thruster);
 }

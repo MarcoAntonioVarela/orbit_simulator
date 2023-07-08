@@ -29,6 +29,8 @@ class Acceleration
       // Setters
       void setDDX(double ddx) { this->ddx = ddx; }
       void setDDY(double ddy) { this->ddy = ddy; }
+
+      void update(Angle& angle, double acceleration);
 };
 
 // stream I/O useful for debugging

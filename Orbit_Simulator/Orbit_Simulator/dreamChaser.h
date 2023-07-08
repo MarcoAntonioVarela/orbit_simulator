@@ -27,12 +27,16 @@ public:
    {
       og.drawShip(position, angle.get(), thrust);
    }
-   
+
    // virtual override
-   void update();
+   void update(double thruster);
 
    // For getting keystrokes so it can move
    void move(const Interface*& pUI);
+
+   // Changing the thrust
+   void fireThruster() { thrust = true; }
+   void stopThruster() { thrust = false; }
 
 
 private:

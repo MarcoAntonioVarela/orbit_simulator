@@ -24,7 +24,11 @@ Acceleration::Acceleration(Angle& angle, double acceleration)
    ddy = acceleration * cos(angle.get());
 }
 
-
+void Acceleration::update(Angle& angle, double acceleration)
+{
+   ddx = acceleration * sin(angle.get());
+   ddy = acceleration * cos(angle.get());
+}
 
 std::ostream& operator<<(std::ostream& out, const Acceleration& a)
 {
