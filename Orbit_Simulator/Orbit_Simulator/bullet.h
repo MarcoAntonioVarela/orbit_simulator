@@ -12,7 +12,7 @@
 
 
 /************************
-* BULLET : ORBITAL OBJECT
+* BULLET : EXPIRING OBJECT
 *************************/
 class Bullet : public ExpiringObject
 {

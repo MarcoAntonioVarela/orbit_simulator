@@ -32,8 +32,6 @@ const double TIME_DILATION = 1440.0;         // time dilation
 * happens. This method sets that object to be killed, so later it can be
 * removed from the list.
 ************************************************************************/
-
-
 void Simulator::handleCollision()
 {
    for (auto it = orbitalObjects.begin(); it != orbitalObjects.end(); /*Not incremeanting here*/)

@@ -22,7 +22,7 @@ const double EARTH_GRAVITY = -9.8067;            // gravity
 void OrbitalObject::update()
 {
    // Compute height
-   // h = sqrt(x^2 + y^2)
+   // h = sqrt(x^2 + y^2) - r
    double height = sqrt((position.getMetersX() * position.getMetersX()) + (position.getMetersY() * position.getMetersY())) - EARTH_RADIUS;
 
    // Compute gravity
@@ -32,11 +32,11 @@ void OrbitalObject::update()
    // Compute acceleration
    Acceleration acceleration(angle, gravity);
 
-   // Compute velocity
-   velocity.update(acceleration);
-
    // Compute position
    position.update(velocity, acceleration);
+
+   // Compute velocity
+   velocity.update(acceleration);
 
    // Compute angle
    angle.update(position);
