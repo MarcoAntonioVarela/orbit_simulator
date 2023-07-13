@@ -48,6 +48,5 @@ void OrbitalObject::update()
    cout << "Vel:       " << velocity      << endl;
    cout << "Acc:       " << acceleration  << endl;
    cout << "Angle:     " << angle         << endl << endl;
-   // cout << "Earth : " << pDemo->angleEarth << endl << endl;
    #endif
 }

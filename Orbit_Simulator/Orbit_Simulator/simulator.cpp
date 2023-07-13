@@ -22,9 +22,10 @@ using namespace std;
 double angleEarth = 0.0;
 
 // Constants, also temporary
-const double FRAME_RATE = 30.0;              // frame rate
-const double SECONDS_PER_DAY = 86400.0;      // seconds in a day
-const double TIME_DILATION = 1440.0;         // time dilation
+const double FRAME_RATE      = 30.0;           // frame rate
+const double SECONDS_PER_DAY = 86400.0;        // seconds in a day
+const double TIME_DILATION   = 1440.0;         // time dilation
+const int    NUMBER_OF_STARS = 100;            // stars to be created
 
 /***********************************************************************
 * HANDLE COLLISION
@@ -80,9 +81,17 @@ void Simulator::add(OrbitalObject*& object)
 ************************************************************************/
 void Simulator::draw(ogstream& og)
 {
+   // Drawing the stars
+   for (auto star : stars)
+      star.draw(og);
+
+   // Drawing the Earth
    og.drawEarth(Position(), angleEarth);
+   
+   // Drwaing the Dream Chaser
    dreamChaser->draw(og);
 
+   // Drawing all the satelites currently alive
    for (auto object : orbitalObjects)
       object->draw(og);
 }
@@ -94,6 +103,10 @@ void Simulator::draw(ogstream& og)
 ************************************************************************/
 void Simulator::update(const Interface*& pUI)
 {
+   // Updating the stars
+   for (auto it = stars.begin(); it != stars.end(); it++)
+      (*it)++;
+
    // Updating earth's rotation
    angleEarth -= (((2 * PI) / FRAME_RATE) * (TIME_DILATION / SECONDS_PER_DAY));
 
@@ -108,6 +121,7 @@ void Simulator::update(const Interface*& pUI)
    // Creating bullets as necessary
    if (pUI->isSpace())
       orbitalObjects.push_back(new Bullet(dreamChaser->getPosition(), dreamChaser->getVelocity(), dreamChaser->getAngle(), 1000.0));
+
    // Moving the Dream Chaser
    dreamChaser->move(pUI);
 }
@@ -119,6 +133,14 @@ void Simulator::update(const Interface*& pUI)
 ************************************************************************/
 void Simulator::reset()
 {
+   // Creating the stars
+   for (int i = 0; i < NUMBER_OF_STARS; i++)
+   {
+      Position pos(random(-100000000.0, 100000000.0), random(-100000000.0, 100000000.0));
+      Star star(pos);
+      stars.push_back(star);
+   }
+
    // Initialize the Dream Chaser
    dreamChaser = new DreamChaser(Position(-36515095.13, 21085000.0/*Upper left of the screen*/), Velocity(0.0, -2000.0), Angle());
 

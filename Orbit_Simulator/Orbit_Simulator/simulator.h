@@ -7,9 +7,10 @@
 *   Orbit simulator
 ************************************************************************/
 #pragma once
-#include "orbitalObject.h"
-#include "dreamChaser.h"
-#include <list>
+#include "orbitalObject.h" // For the list to initialize
+#include "dreamChaser.h"   // Since the user will manipule it, we need to know it here
+#include "star.h"          // For STAR
+#include <list>            // For std::list
 
 class TestHandleCollision;
 class Interface;
@@ -34,6 +35,7 @@ public:
 private:
    DreamChaser* dreamChaser;
    std::list<OrbitalObject*> orbitalObjects;
+   std::list<Star> stars;
    Position ptUpperRight;           // Size of the screen.
 
    // Helper functions
