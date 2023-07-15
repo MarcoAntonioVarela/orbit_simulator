@@ -89,7 +89,7 @@ void Simulator::draw(ogstream& og)
    og.drawEarth(Position(), angleEarth);
    
    // Drwaing the Dream Chaser
-   dreamChaser->draw(og);
+   //dreamChaser->draw(og);
 
    // Drawing all the satelites currently alive
    for (auto object : orbitalObjects)
@@ -112,18 +112,11 @@ void Simulator::update(const Interface*& pUI)
 
    // All the current objects in the simulation
    for (auto object : orbitalObjects)
-      object->update();
+      object->update(pUI);
 
    // Check if an object needs to be destroyed
    handleCollision();
    destroy();
-
-   // Creating bullets as necessary
-   if (pUI->isSpace())
-      orbitalObjects.push_back(new Bullet(dreamChaser->getPosition(), dreamChaser->getVelocity(), dreamChaser->getAngle(), 1000.0));
-
-   // Moving the Dream Chaser
-   dreamChaser->move(pUI);
 }
 
 /***********************************************************************
@@ -142,9 +135,9 @@ void Simulator::reset()
    }
 
    // Initialize the Dream Chaser
-   dreamChaser = new DreamChaser(Position(-36515095.13, 21085000.0/*Upper left of the screen*/), Velocity(0.0, -2000.0), Angle());
+   DreamChaser* dreamChaser = new DreamChaser(Position(-36515095.13, 21085000.0/*Upper left of the screen*/), Velocity(0.0, -2000.0), Angle());
 
-   //// Creating all the GPS
+   // Creating all the GPS
    GPS* gps1 = new GPS(Position(0.0, 26560000.0),             Velocity(-3880.0, 0.0),       Angle());
    GPS* gps2 = new GPS(Position(23001634.72, 13280000.0),     Velocity(-1940.0, 3360.18),   Angle());
    GPS* gps3 = new GPS(Position(23001634.72, -13280000.0),    Velocity(1940.0,  3360.18),   Angle());
@@ -175,6 +168,7 @@ void Simulator::reset()
    orbitalObjects.push_back(hubble);
    orbitalObjects.push_back(dragon);
    orbitalObjects.push_back(starlink);
+   orbitalObjects.push_back(dreamChaser);
 
    // Testing with the gps from Lab 07
    #ifdef DEBUG

@@ -11,11 +11,13 @@
 #include "velocity.h"
 #include "angle.h"
 #include "uiDraw.h"
+#include <list>
 #include <cassert>
 
 #pragma once
 
 class TestHandleCollision;
+class Interface;
 
 class OrbitalObject
 {
@@ -43,9 +45,9 @@ public:
 
    // Virtual methods
    virtual void draw(ogstream & og) = 0;
-   virtual void update();
    virtual double getRadius() = 0;
-
+   virtual void update(const Interface*& pUI);
+   virtual void input(const Interface*& pUI) {}
 
 private:
    bool dead = false;

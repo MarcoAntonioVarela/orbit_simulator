@@ -19,7 +19,7 @@ const double EARTH_GRAVITY = -9.8067;            // gravity
 * UPDATE
 * Physics computations that happen every frame
 *********************************************/
-void OrbitalObject::update()
+void OrbitalObject::update(const Interface*& pUI)
 {
    // Compute height
    // h = sqrt(x^2 + y^2) - r
@@ -40,6 +40,9 @@ void OrbitalObject::update()
 
    // Compute angle
    angle.update(position);
+
+   // Getting input from the user
+   input(pUI);
 
    #ifdef DEBUG
    cout << "Height:    " << height        << endl;

@@ -33,13 +33,15 @@ void DreamChaser::update(double thruster)
 
    // Compute acceleration
    Acceleration acceleration;
-   acceleration.update(angle, gravity + thruster);
+   acceleration.update(frontShip, gravity + thruster);
 
    // Compute velocity
    velocity.update(acceleration);
 
    // Compute position
    position.update(velocity, acceleration);
+
+   angle.update(position);
 
 #ifdef DEBUG
    cout << "Height:    " << height << endl;
@@ -52,30 +54,28 @@ void DreamChaser::update(double thruster)
 }
 
 /*************************************************
-* DREAM CHASER : MOVE
+* DREAM CHASER : INPUT
 * Getting input from the keyboard, and determine how the
 * Dream Chaser is going to move
 **************************************************/
-void DreamChaser::move(const Interface*& pUI)
+void DreamChaser::input(const Interface*& pUI)
 {
+   thrust = pUI->isDown();
    double thruster = 0.0;
    if (pUI->isDown())
    {
       // Accelerate 2.0 m/s2
       thruster = 2.0;
-      fireThruster();
    }
    else if (pUI->isRight())
    {
       // Angle changes 0.1 radians to the right
-      angle++;
-      stopThruster();
+      frontShip++;
    }
    else if (pUI->isLeft())
    {
       // Angle changes 0.1 radians to the left
-      angle--;
-      stopThruster();
+      frontShip--;
    }
    update(thruster);
 }

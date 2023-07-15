@@ -22,21 +22,22 @@ public:
    }
    // Constructors
    DreamChaser() : OrbitalObject() {}
-   DreamChaser(Position position, Velocity velocity, Angle angle) : OrbitalObject(position, velocity, angle) {}
+   DreamChaser(Position position, Velocity velocity, Angle angle) : OrbitalObject(position, velocity, angle), frontShip(angle) {}
 
    // Virtual method
    void draw(ogstream& og)
    {
-      og.drawShip(position, angle.get(), thrust);
+      og.drawShip(position, frontShip.get(), thrust);
    }
 
    // virtual override
    void update(double thruster);
 
    // For getting keystrokes so it can move
-   void move(const Interface*& pUI);
+   void input(const Interface*& pUI);
 
 private:
+   Angle frontShip;
    bool thrust = false;
 
    // Changing the thrust

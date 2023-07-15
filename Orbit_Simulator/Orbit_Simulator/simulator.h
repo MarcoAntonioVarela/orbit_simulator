@@ -33,7 +33,6 @@ public:
    void update(const Interface*& pUI);
 
 private:
-   DreamChaser* dreamChaser;
    std::list<OrbitalObject*> orbitalObjects;
    std::list<Star> stars;
    Position ptUpperRight;           // Size of the screen.

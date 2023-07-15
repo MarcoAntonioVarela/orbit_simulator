@@ -42,7 +42,6 @@ void callBack(const Interface* pUI, void* p)
 
    // draw orbital objects
    pSimulator->draw(gout);
-
 }
 
 double Position::metersFromPixels = 40.0;
